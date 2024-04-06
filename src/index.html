@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATP - Testing Iframe</title>
+</head>
+<body>
+    <!-- <iframe src="https://replicate.com/stability-ai/stable-diffusion" frameborder="0"></iframe> -->
+    <button onclick="createSDImage(document.getElementById('imagePrompt').value)">Run</button>
+    <form id="aiImageForm">
+        <label for="imagePrompt">Image Prompt:</label><br>
+        <input type="text" id="imagePrompt" name="imagePrompt" value="an astronaut riding a horse on mars, hd, dramatic lighting">
+    </form>
+    <div id="aiImage"></div>
+</body>
+<script src="index.js"></script>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    button {
+        margin: 10px;
+    }
+    form {
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+    input {
+        width: 80%;
+    }
+</style>
+</html>
