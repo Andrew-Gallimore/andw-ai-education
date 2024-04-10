@@ -23,7 +23,7 @@ function createSDImage(prompt="") {
 
     try {
         // Making the post request to the server
-        fetch("http://full-imggen.andw.dev", {
+        fetch("https://full-imggen.andw.dev", {
             method: "POST",
             headers: {
                 "content-type": "application/json"
