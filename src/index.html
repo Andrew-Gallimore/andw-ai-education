@@ -6,30 +6,119 @@
     <title>ATP - Testing Iframe</title>
 </head>
 <body>
-    <!-- <iframe src="https://replicate.com/stability-ai/stable-diffusion" frameborder="0"></iframe> -->
-    <button onclick="createSDImage(document.getElementById('imagePrompt').value)">Run</button>
+    <div class="overlay-layer">
+        <img class="big" src="img/Humboldt-logo.png" alt="CalPoly Humboldt Logo">
+        <img class="small" src="img/Humboldt-logo-small.png" alt="CalPoly Humboldt Samll Icon" srcset="">
+    </div>
+
+    <!-- First Section: Image generation -->
+    <div class="section img-gen active">
+        <h1 class="main-title">
+            Generative AI
+        </h1>
+
+        <div class="content-wrapper">
+            <!-- First content: Corousel of Images -->
+            <div class="c carousel active">
+                <h2 class="main-subtitle">Exploring how it works</h2>
+                <div class="image-size">
+                    <div class="img-wrapper">
+                        <img src="img/generated/out-1.png" alt="Placeholder AI Generated Image">
+                    </div>
+                </div>
+            </div>
+            <!-- Second content: Prompt Input -->
+            <div class="c prompt">
+                <div class="box">
+                    <form id="promptForm">
+                        <textarea id="promptInput" name="promptInput" rows="4" cols="50" placeholder="Describe the image you want..."></textarea>
+    
+    
+                    </form>
+                    <div class="prompt-suggestion">
+                        <img width="48" height="48" src="https://img.icons8.com/ffffff/material-outlined/48/bot.png" alt="bot"/>
+                        <p class="color">Try: </p>
+                        <p>"</p>
+                        <p class="prompt">Andrew Gallimore</p>
+                        <p>"</p>
+                    </div>
+                </div>
+                <div class="prompts-toggle">
+                    <input type="checkbox" id="togglePrompts" onclick="togglePrompts(this)" checked>
+                    <label class="smaller" for="togglePrompts" onclick="">Show suggested prompts?</label>
+                </div>
+            </div>
+            <!-- Third content: Displaying the User-generated Image -->
+            <div class="c display">
+                <div class="image-size loading">
+                    <div class="loading-anim">
+                        <div class="content">
+                            
+                        </div>
+                    </div>
+                    <div class="img-location">
+                        <div class="img-wrapper">
+                            <!-- <img src="img/generated/out-1.png" alt="Placeholder AI Generated Image"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom-buttons">
+            <button class="primary main-button" onclick="primaryButtonClicked(this)">
+                <p>Try it out!</p>
+                <div class="loader"></div>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Second Section: Presentation -->
+    <div class="section presentation">
+
+    </div>
+
+    <div class="background-layer">
+        <div class="blur1"></div>
+        <div class="blur2"></div>
+        <div class="blur3"></div>
+    </div>
+
+    <!-- <button onclick="createSDImage(document.getElementById('imagePrompt').value)">Run</button>
     <form id="aiImageForm">
         <label for="imagePrompt">Image Prompt:</label><br>
         <input type="text" id="imagePrompt" name="imagePrompt" value="an astronaut riding a horse on mars, hd, dramatic lighting">
     </form>
-    <div id="aiImage"></div>
+    <div id="aiImage"></div> -->
 </body>
-<script src="index.js"></script>
+<script src="js/alerts.js"></script>
+<script src="js/filtering.js"></script>
+<script src="js/imageGen.js"></script>
+<script src="js/promptGen.js"></script>
+<script src="js/stateManagement.js"></script>
+<script src="js/weirdHack.js"></script>
+<script>
+    document.getElementById("promptForm").addEventListener("submit", promptFormSubmit);
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
-    button {
-        margin: 10px;
-    }
-    form {
-        width: calc(100% - 20px);
-        padding: 10px;
-    }
-    input {
-        width: 80%;
-    }
-</style>
+    document.getElementById("promptInput").addEventListener("keypress", function(event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault();
+            promptFormSubmit();
+        }
+    });
+</script>
+
+
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/notifyCustom.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<script src="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/noty.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/noty.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/themes/sunset.css">
+
+<script defer src="https://unpkg.com/css-doodle@0.29.1/css-doodle.min.js"></script>
 </html>
