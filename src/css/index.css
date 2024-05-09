@@ -36,6 +36,17 @@ p, button, input, label, textarea {
 label.smaller {
     font-size: 1.4rem;
 }
+@media (max-width: 950px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p, button, input, label, textarea {
+        font-size: 1.3rem;
+    }
+    label.smaller {
+        font-size: 1.1rem;
+    }
+}
 /* * {
     outline: solid 1px red;
 } */
@@ -54,7 +65,7 @@ label.smaller {
     padding: 25px;
 }
 .overlay-layer .small {
-    width: 75px;
+    width: 60px;
     padding: 15px;
 
     display: none;
@@ -121,6 +132,11 @@ label.smaller {
     background: green;
     opacity: 0.3;
 }
+@media (max-width: 570px) {
+    .background-layer .blur3 {
+        display: none;
+    }
+}
 
 /* Section 1: Image generation */
 .section.img-gen {
@@ -182,6 +198,11 @@ label.smaller {
     -webkit-background-clip: text;
     background-clip: text;
 }
+@media (max-width: 950px) {
+    .c.carousel h2 {
+        font-size: 2.5rem;
+    }
+}
 .c.carousel .image-size {
     align-self: center;
     margin: 10px;
@@ -193,6 +214,8 @@ label.smaller {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    max-width: calc(100% - 20px);
 }
 .c.carousel .image-size .img-wrapper {
     width: 100px;
@@ -238,13 +261,19 @@ label.smaller {
 .c.prompt .box,
 .c.prompt .prompts-toggle {
     width: 70%;
-    min-width: 400px;
+    min-width: 200px;
     max-width: 1000px;
 }
 
 .c.prompt .prompts-toggle input {
     width: 20px;
     height: 20px;
+}
+@media (max-width: 950px) {
+    .c.prompt .prompts-toggle input {
+        width: 16px;
+        height: 16px;
+    }
 }
 .c.prompt form {
     flex-grow: 100;
@@ -281,6 +310,31 @@ label.smaller {
 }
 .c.prompt .prompt-suggestion .two {
     align-self: flex-end;
+}
+@media (max-width: 950px) {
+    .c.prompt .box,
+    .c.prompt .prompts-toggle {
+        width: 80%;
+    }
+    .c.prompt .prompt-suggestion img {
+        width: 34px;
+        height: 34px;
+    }
+}
+@media (max-width: 700px) {
+    .c.prompt .box,
+    .c.prompt .prompts-toggle {
+        width: 90%;
+    }
+}
+@media (max-width: 570px) {
+    .c.prompt .prompt-suggestion {
+        padding: 2px;
+    }
+    .c.prompt .prompt-suggestion img {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 

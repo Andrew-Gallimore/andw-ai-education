@@ -1,11 +1,12 @@
 const gulp = require('gulp');
 const replace = require('gulp-replace');
+const path = '/projects/ai-education';
 
-// Prefixes all src="" attributes in the index.html file with /projects/ai-education/
+// Prefixes all src="" and href="" attributes in the index.html file with what ever path is set to
 gulp.task('prefix-src', function(){
     return gulp.src('src/index.html')
-        .pipe(replace(/src="(?!https:\/\/)([^"]*)"/g, 'src="/projects/ai-education/$1"'))
-        .pipe(replace(/href="(?!https:\/\/)([^"]*)"/g, 'href="/projects/ai-education/$1"'))
+        .pipe(replace(/src="(?!https:\/\/)([^"]*)"/g, `src="${path}/$1"`))
+        .pipe(replace(/href="(?!https:\/\/)([^"]*)"/g, `href="${path}/$1"`))
         .pipe(gulp.dest('dist'));
 });
 
