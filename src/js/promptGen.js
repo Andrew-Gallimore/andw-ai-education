@@ -16,6 +16,8 @@ function newExamplePrompt() {
         "Submarine in the sky abstract art",
         "A tree with a face with a children's book style",
         "City from Cyberpunk 2077, super colorful with neon lights, flying cars",
+        "Redwoods, mushrooms, and banana slugs in the fog",
+        "Aquaculture habitat, with seaweed beds in the ocean, manga style",
     ];
 
     var temp = "";
@@ -30,6 +32,14 @@ function newExamplePrompt() {
 setInterval(() => {
     newExamplePrompt();
 }, 8000);
+window.addEventListener('DOMContentLoaded', () => {
+    newExamplePrompt();
+});
+
+/*
+* Toggles whether it shows prompt suggestions.
+* @param {Element} checkbox - The checkbox that was clicked
+*/
 
 function togglePrompts(checkbox) {
     if(checkbox.checked) {

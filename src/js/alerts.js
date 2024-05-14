@@ -10,6 +10,14 @@
 function alertNSFW() {
     // Creates local alert on text-input saying prompt is flaged as nsfw
     console.log("ALERT: Prompt is NSFW.");
+
+    new Noty({
+        type: 'error',
+        layout: 'bottomRight',
+        text: 'Prompt flagged as NSFW',
+        theme: 'sunset',
+        timeout: 3000,
+    }).show();
 }
 
 /*
@@ -35,7 +43,16 @@ function alertAPIError(message) {
     // Creates more global alert saying there was an error with the API
     console.log("ALERT: API Error - " + message);
 
+    new Noty({
+        type: 'error',
+        layout: 'bottomRight',
+        text: 'Error: ' + message,
+        theme: 'sunset',
+        timeout: 3000,
+    }).show();
+
     // Removing loading from the main button
     document.querySelector(".main-button").classList.remove("loading");
     document.querySelector(".main-button").disabled = false;
+    document.querySelector(".main-button p").innerHTML = "Try again...";
 }

@@ -36,7 +36,7 @@ function changeSectionState(state) {
 function changeConetentState(state) {
     if(contentState == state) return;
 
-    if(contentState == 2 && state == 0) {
+    if(contentState == 2 && state == 1) {
         // We are going back to the prompt, so we need to remove the image
         displayFadeOut();
     }
@@ -66,6 +66,7 @@ function changeConetentState(state) {
     }else if(state == 2) {
         contentOut("carousel");
         contentOut("prompt");
+
         setTimeout(() => {
             displayFadeIn();
             
@@ -133,12 +134,15 @@ function primaryButtonClicked(button) {
         console.log("Submitting form...")
         promptFormSubmit();
     }else if(contentState == 2) {
-        changeConetentState(0);
+        changeConetentState(1);
     }
 }
 
+var checkingGeneration = false;
 function promptFormSubmit(event="") {
     if(event !== "") event.preventDefault();
+    if(checkingGeneration) return;
+    checkingGeneration = true;
 
     // Showing loader
     var button = document.querySelector(".main-button");
@@ -150,26 +154,25 @@ function promptFormSubmit(event="") {
     console.log(prompt)
     
     // Checking if the prompt is valid
-    // NOTE: we technically don't need this here, as we check it inside the generateImage function as well
     if(checkPromptValid(prompt)) {
         // Generating the image
         generateImage(prompt);
 
-        // If we are successfully generation the image, we will change the content state
+        // If we are successfully generating the image, we will change the content state
         setTimeout(() => {
             if(generatingImg) {
                 // Going to display
                 changeConetentState(2);
-
             }
-        }, 200);
+        }, 800);
     }else {
         // Hiding loader
         button.classList.remove("loading");
         button.disabled = false;
+        changeConetentState(1);
     }
-    // changeConetentState(2);
 
+    checkingGeneration = false;
     return false;
 }
 
