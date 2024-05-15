@@ -11,6 +11,7 @@ gulp.task('prefix-src', function(){
     return gulp.src(desitnationFold + '/index.html')
         .pipe(replace(/src="(?!https:\/\/)([^"]*)"/g, `src="${path}/$1"`))
         .pipe(replace(/href="(?!https:\/\/)([^"]*)"/g, `href="${path}/$1"`))
+        .pipe(replace('const BASE_URL = \'\'', 'const BASE_URL = \'' + path + '\''))
         .pipe(gulp.dest(desitnationFold));
 });
 

@@ -112,6 +112,9 @@
 <script defer src="js/promptGen.js"></script>
 <script defer src="js/weirdHack.js"></script>
 <script>
+    // This variable is updated by the gulp.js build script
+    const BASE_URL = '';
+
     document.getElementById("promptForm").addEventListener("submit", promptFormSubmit);
 
     document.getElementById("promptInput").addEventListener("keypress", function(event) {
