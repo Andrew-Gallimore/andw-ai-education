@@ -34,4 +34,4 @@ gulp.task('copy-files', function(){
 });
 
 gulp.task('dev', gulp.series('copy-files', 'critical-css'));
-gulp.task('default', gulp.series('prefix-src', 'copy-files', 'critical-css'));
+gulp.task('default', gulp.series('copy-files', 'prefix-src', 'critical-css'));
