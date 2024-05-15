@@ -33,5 +33,5 @@ gulp.task('copy-files', function(){
         .pipe(gulp.dest(desitnationFold));
 });
 
-gulp.task('default', gulp.series('copy-files', 'critical-css'));
-// gulp.task('default', gulp.series('prefix-src', 'copy-files', 'critical-css'));
+gulp.task('dev', gulp.series('copy-files', 'critical-css'));
+gulp.task('default', gulp.series('prefix-src', 'copy-files', 'critical-css'));
