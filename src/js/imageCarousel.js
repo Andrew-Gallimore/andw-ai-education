@@ -9,35 +9,35 @@
 // The list of images and their associated text
 var images = [
     {
-        src: BASE_URL + "/img/generated/img1.png",
+        src: BASE_URL + "img/generated/img1.png",
         text: "Plateau landscape, llamas, shrubs and grasses, natural colors."
     },
     {
-        src: BASE_URL + "/img/generated/img2.png",
+        src: BASE_URL + "img/generated/img2.png",
         text: "Redwoods, mushrooms, and banana slugs in the fog"
     },
     {
-        src: BASE_URL + "/img/generated/img3.png",
+        src: BASE_URL + "img/generated/img3.png",
         text: "Vibrant steampunk giant clock, gears, and mythical creatures on a flying turtle"
     },
     {
-        src: BASE_URL + "/img/generated/img4.png",
+        src: BASE_URL + "img/generated/img4.png",
         text: "Black and white street photography of a rainy night in New York"
     },
     {
-        src: BASE_URL + "/img/generated/img5.png",
+        src: BASE_URL + "img/generated/img5.png",
         text: "Submarine in the sky abstract fantasy art"
     },
     {
-        src: BASE_URL + "/img/generated/img6.png",
+        src: BASE_URL + "img/generated/img6.png",
         text: "Masterpiece, smiling happy girl with necklace on collarbone, wavy red hair, freckles, and ponytail. With blurry foreground, intricate dappled sunlight, just upper body"
     },
     {
-        src: BASE_URL + "/img/generated/img7.png",
+        src: BASE_URL + "img/generated/img7.png",
         text: "Abstract of how musicians visualize music flowing, with highs and lows, sharp corners and smooth movements"
     },
     {
-        src: BASE_URL + "/img/generated/img8.png",
+        src: BASE_URL + "img/generated/img8.png",
         text: "A portal to a dream of another galaxy, matte painting, futuristic and mysterious"
     },
 ];
