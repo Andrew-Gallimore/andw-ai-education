@@ -128,7 +128,7 @@ const blanketNSFWstrings = [
 "fagots","fatass","felching","fellate","fellatio","fingerfuck","fingerfucked","fingerfucker","fingerfuckers","fingerfucking","fingerfucks",
 "fistfuck","fistfucked","fistfucker","fistfuckers","fistfucking","fistfuckings","fistfucks","fuckhead","fuckheads","fuckingshitmotherfucker",
 "fuckme","fuckwhit","fuckwit","fukwit","fukwhit","gangbang","gangbanged","gangbangs","gaysex","goatse","hardcoresex","horniest",
-"horny","hotsex","jack-off","jackoff","jerk-off","jism","jizm","jizz","kawk","kondum","kondums",
+"horny","hotsex","jack-off","jackoff","jerk-off","jism","jizm","jizz","kawk","kondum","kondums", "motherfucker",
 "kummer","humming","kunilingus","l3i+ch","l3itch","labia","m0f0","m0fo","m45terbate","ma5terb8","ma5terbate",
 "masochist","master-bate","masterb8","masterbat*","masterbat3","masterbate","masterbation","masterbations","masturbate","nig","n1g",
 "n1gga","n1gger","nazi","nigg3r","nigg4h","nigga","niggah","niggas","niggaz","nigger","niggers",

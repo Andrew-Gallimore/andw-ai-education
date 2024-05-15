@@ -18,6 +18,7 @@ function newExamplePrompt() {
         "City from Cyberpunk 2077, super colorful with neon lights, flying cars",
         "Redwoods, mushrooms, and banana slugs in the fog",
         "Aquaculture habitat, with seaweed beds in the ocean, manga style",
+        "A portal to a dream of another galaxy, matte painting, futuristic, mysterious",
     ];
 
     var temp = "";

@@ -38,6 +38,7 @@ function alertNoPrompt() {
 
 /*
  * Alert the user that the API is not working
+ * @param {string} message - The message to put inside the alert
  */
 function alertAPIError(message) {
     // Creates more global alert saying there was an error with the API

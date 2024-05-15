@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATP - Testing Iframe</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/notifyCustom.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <div class="overlay-layer">
-        <img class="big" src="img/Humboldt-logo.png" alt="CalPoly Humboldt Logo">
-        <img class="small" src="img/Humboldt-logo-small.png" alt="CalPoly Humboldt Samll Icon" srcset="">
+        <div class="left">
+            <img class="makerspace big" src="img/Makerspace-Logo.png" alt="CalPoly Humboldt Makerspace Logo">
+
+        </div>
+        <div class="right">
+            <img class="big" src="img/Humboldt-logo.png" alt="CalPoly Humboldt Logo">
+            <img class="small" src="img/Humboldt-logo-small.png" alt="CalPoly Humboldt Samll Icon" srcset="">
+        </div>
     </div>
 
     <!-- First Section: Image generation -->
@@ -22,9 +33,11 @@
             <div class="c carousel active">
                 <h2 class="main-subtitle">Exploring how it works</h2>
                 <div class="image-size">
-                    <div class="img-wrapper">
-                        <img src="img/generated/out-1.png" alt="Placeholder AI Generated Image">
-                    </div>
+                    <template>
+                        <div class="img-wrapper">
+                            <img src="img/generated/out-1.png" alt="Placeholder AI Generated Image">
+                        </div>
+                    </template>
                 </div>
             </div>
             <!-- Second content: Prompt Input -->
@@ -91,12 +104,13 @@
     </form>
     <div id="aiImage"></div> -->
 </body>
-<script src="js/alerts.js"></script>
-<script src="js/filtering.js"></script>
-<script src="js/imageGen.js"></script>
-<script src="js/promptGen.js"></script>
 <script src="js/stateManagement.js"></script>
-<script src="js/weirdHack.js"></script>
+<script defer src="js/imageCarousel.js"></script>
+<script defer src="js/alerts.js"></script>
+<script defer src="js/filtering.js"></script>
+<script defer src="js/imageGen.js"></script>
+<script defer src="js/promptGen.js"></script>
+<script defer src="js/weirdHack.js"></script>
 <script>
     document.getElementById("promptForm").addEventListener("submit", promptFormSubmit);
 
@@ -107,12 +121,6 @@
         }
     });
 </script>
-
-
-<link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/buttons.css">
-<link rel="stylesheet" href="css/notifyCustom.css">
-<link rel="stylesheet" href="css/animations.css">
 
 <script src="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/noty.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/noty.css">

@@ -1,5 +1,6 @@
 window.addEventListener('resize', resizeImage);
 window.addEventListener('load', resizeImage);
+window.addEventListener('DOMContentLoaded', resizeImage);
 window.addEventListener('zoom', resizeImage);
 
 function resizeImage() {
@@ -16,8 +17,10 @@ function resizeImage() {
         }
 
         // Set the width and height of the img element to the same value
-        el.querySelector('.img-wrapper').style.width = `${dim}px`;
-        el.querySelector('.img-wrapper').style.height = `${dim}px`;
+        el.querySelectorAll('.img-wrapper').forEach(element => {
+            element.style.width = `${dim}px`;
+            element.style.height = `${dim}px`;
+        });
 
 
         // Also setting the loader animation to the same size
