@@ -3,7 +3,7 @@ const replace = require('gulp-replace');
 const extractCriticalCss = require('gulp-extract-critical-css');
 
 // Custom defined variables
-const path = '/projects/ai-education';
+const path = '/projects/ai-education/demo';
 const desitnationFold = 'dist';
 
 // Prefixes all src="" and href="" attributes in the index.html file with what ever path is set to
